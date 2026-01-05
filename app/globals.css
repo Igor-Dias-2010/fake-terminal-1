@@ -1,42 +1,43 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body {
+  background-color: black;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.terminal-wrapper {
+  display: flex;
+  align-items: start;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  border: 2px solid rgb(0, 255, 0);
+  background-color: black;
+  color: rgb(0, 255, 0);
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+  cursor: grab;
+}
+textarea::-webkit-scrollbar-thumb:active{
+  cursor: grabbing;
 }
