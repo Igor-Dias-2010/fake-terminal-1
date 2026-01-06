@@ -8,20 +8,38 @@ body {
   background-color: black;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 .terminal-wrapper {
+  height: 100vh;
   display: flex;
-  align-items: start;
+  flex-direction: column;
+}
+
+.terminal-history {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.terminal-input {
+  display: flex;
 }
 
 textarea {
+  height: 120px;
   width: 100%;
-  resize: vertical;
-  border: 2px solid rgb(0, 255, 0);
+  resize: none;
+  border: 3px solid rgb(0, 255, 0);
   background-color: black;
   color: rgb(0, 255, 0);
   font-family: monospace;
   font-size: 15px;
   line-height: 1.3;
+  padding: 8px;
+  outline: none;
 }
 
 textarea::-webkit-scrollbar {
@@ -38,6 +56,11 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 10px;
   cursor: grab;
 }
-textarea::-webkit-scrollbar-thumb:active{
+
+textarea::-webkit-scrollbar-thumb:active {
   cursor: grabbing;
+}
+
+textarea::selection {
+  background-color: #555;
 }
